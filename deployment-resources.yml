@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pacman
+  name: pacman
+  namespace: pacman
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pacman
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pacman
+    spec:
+      containers:
+      - image: ghcr.io/duartediasctw/cn-intro/duartediasctw/pacman:2.0
+        name: pacman
+        resources:
+          requests:
+            cpu: "1m"
+status: {}
