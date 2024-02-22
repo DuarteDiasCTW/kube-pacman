@@ -5,9 +5,9 @@ metadata:
   labels:
     app: pacman
   name: pacman
-  namespace: pacman
+  namespace: pacman-argo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: pacman
